@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CFG_Configuration" xml:space="preserve">
+    <value>全ての設定が完了しました！
+ショートカットを追加した場合はショートカットから起動できます！
+SteamのURLを入力した場合は元のショートカットを消さないようにしてください。
+ソフトは閉じても構いません</value>
+  </data>
+  <data name="main_mod_loading" xml:space="preserve">
+    <value>MODバージョンをロード中</value>
+  </data>
+  <data name="main_online_loading" xml:space="preserve">
+    <value>オンラインバージョンをロード中</value>
+  </data>
+  <data name="settings_dll_del" xml:space="preserve">
+    <value>選択した項目を削除</value>
+  </data>
+  <data name="settings_dll_listbox" xml:space="preserve">
+    <value>ASIローダー以外の無効化したいファイルの選択</value>
+  </data>
+  <data name="settings_dll_select_btn" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="settings_dll_warn" xml:space="preserve">
+    <value>以下のファイルは追加することが推奨されていません
+それでも追加しますか？</value>
+  </data>
+  <data name="settings_gtav_exists" xml:space="preserve">
+    <value>GTA5.exeが見つかりました！</value>
+  </data>
+  <data name="settings_gtav_not_found_message" xml:space="preserve">
+    <value>GTAVのインストール先が指定されていないかGTAV.exeが見つかりません</value>
+  </data>
+  <data name="settings_gtav_no_exists" xml:space="preserve">
+    <value>GTA5.exeが見つかりません</value>
+  </data>
+  <data name="settings_location" xml:space="preserve">
+    <value>GTAVのインストールフォルダ</value>
+  </data>
+  <data name="settings_location_open" xml:space="preserve">
+    <value>参照</value>
+  </data>
+  <data name="settings_location_text" xml:space="preserve">
+    <value>インストールフォルダの場所</value>
+  </data>
+  <data name="settings_oss" xml:space="preserve">
+    <value>OSSライセンス</value>
+  </data>
+  <data name="startup_cfg_add_sc" xml:space="preserve">
+    <value>デスクトップにショートカットを追加する</value>
+  </data>
+  <data name="startup_cfg_desktop_icon_gta" xml:space="preserve">
+    <value>アイコンをGTAVのものにする</value>
+  </data>
+  <data name="startup_cfg_SC_comment" xml:space="preserve">
+    <value>by IV Switcher</value>
+  </data>
+  <data name="startup_cfg_SC_name_mod" xml:space="preserve">
+    <value>GTAV MODありで起動</value>
+  </data>
+  <data name="startup_cfg_SC_name_online" xml:space="preserve">
+    <value>GTAV ONLINEバージョンで起動</value>
+  </data>
+  <data name="startup_cfg_select_type" xml:space="preserve">
+    <value>GTAVの起動方法</value>
+  </data>
+  <data name="startup_cfg_select_type_kam" xml:space="preserve">
+    <value>通常起動</value>
+  </data>
+  <data name="startup_cfg_select_type_pad" xml:space="preserve">
+    <value>Steamを介しての起動(コントローラーに最適 Steamのインストールが必要)</value>
+  </data>
+  <data name="startup_cfg_sorry" xml:space="preserve">
+    <value>この機能は開発中です。コントローラーを使う場合はEpicGamesLauncher等をSteamに追加してそれを入力してください。</value>
+  </data>
+  <data name="startup_cfg_url_error" xml:space="preserve">
+    <value>URLが空です</value>
+  </data>
+  <data name="startup_cfg_use_epic" xml:space="preserve">
+    <value>EpicGamesLauncherを使用する場合</value>
+  </data>
+  <data name="startup_cfg_video_open" xml:space="preserve">
+    <value>解説動画をブラウザで開く</value>
+  </data>
+  <data name="start_up_cfg_kam" xml:space="preserve">
+    <value>ランチャーからデスクトップにショートカットを追加してそのurlをコピーしてここに貼り付け</value>
+  </data>
+  <data name="start_up_cfg_pad" xml:space="preserve">
+    <value>下のボタンを押して解説動画を開いてその指示に従ってください</value>
+  </data>
+</root>

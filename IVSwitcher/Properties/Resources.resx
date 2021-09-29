@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CFG_Configuration" xml:space="preserve">
+    <value>All settings are done!
+If you added a shortcut, you can launch from the shortcut!
+If you have entered a Steam URL, do not delete the original shortcut.
+You can close the software if you want.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main_mod_loading" xml:space="preserve">
+    <value>Loading mod version</value>
+  </data>
+  <data name="main_online_loading" xml:space="preserve">
+    <value>Loading online version</value>
+  </data>
+  <data name="settings_dll_del" xml:space="preserve">
+    <value>Delete selected items</value>
+  </data>
+  <data name="settings_dll_listbox" xml:space="preserve">
+    <value>Select the files you want to disable except for the ASI loader.</value>
+  </data>
+  <data name="settings_dll_select_btn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="settings_dll_warn" xml:space="preserve">
+    <value>The following files are not recommended to be added
+Do you still want to add them?</value>
+  </data>
+  <data name="settings_gtav_exists" xml:space="preserve">
+    <value>GTA5exe has been found!</value>
+  </data>
+  <data name="settings_gtav_not_found_message" xml:space="preserve">
+    <value>GTAV installation destination is not specified or GTAV.exe is not found</value>
+  </data>
+  <data name="settings_gtav_no_exists" xml:space="preserve">
+    <value>GTA5.exe is not found!</value>
+  </data>
+  <data name="settings_location" xml:space="preserve">
+    <value>GTAV installation folder</value>
+  </data>
+  <data name="settings_location_open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="settings_location_text" xml:space="preserve">
+    <value>Location of the installation folder</value>
+  </data>
+  <data name="settings_oss" xml:space="preserve">
+    <value>OSS License</value>
+  </data>
+  <data name="settings_OSS_LICENCE" xml:space="preserve">
+    <value>* MaterialDesignInXamlToolkit
+
+The MIT License (MIT)
+
+Copyright (c) James Willock,  Mulholland Software and Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</value>
+  </data>
+  <data name="startup_cfg_add_sc" xml:space="preserve">
+    <value>Add a shortcut to the desktop</value>
+  </data>
+  <data name="startup_cfg_desktop_icon_gta" xml:space="preserve">
+    <value>Make the icon a GTAV one.</value>
+  </data>
+  <data name="startup_cfg_SC_comment" xml:space="preserve">
+    <value>by IV Switcher</value>
+  </data>
+  <data name="startup_cfg_SC_name_mod" xml:space="preserve">
+    <value>Start with GTAV MOD</value>
+  </data>
+  <data name="startup_cfg_SC_name_online" xml:space="preserve">
+    <value>Launch with GTAV ONLINE version</value>
+  </data>
+  <data name="startup_cfg_select_type" xml:space="preserve">
+    <value>How to start GTAV</value>
+  </data>
+  <data name="startup_cfg_select_type_kam" xml:space="preserve">
+    <value>Normal Startup</value>
+  </data>
+  <data name="startup_cfg_select_type_pad" xml:space="preserve">
+    <value>Launch via Steam (optimal for the controller. Steam must be installed)</value>
+  </data>
+  <data name="startup_cfg_sorry" xml:space="preserve">
+    <value>This feature is under development. If you want to use a controller, please add EpicGamesLauncher or similar to Steam and enter it.</value>
+  </data>
+  <data name="startup_cfg_url_error" xml:space="preserve">
+    <value>The URL is empty.</value>
+  </data>
+  <data name="startup_cfg_use_epic" xml:space="preserve">
+    <value>When using EpicGamesLauncher</value>
+  </data>
+  <data name="startup_cfg_video_open" xml:space="preserve">
+    <value>Open the explanation video in a browser.</value>
+  </data>
+  <data name="start_up_cfg_kam" xml:space="preserve">
+    <value>Add a shortcut to the desktop from the launcher, copy its url and paste it here</value>
+  </data>
+  <data name="start_up_cfg_pad" xml:space="preserve">
+    <value>Click on the button below to open the instructional video and follow the instructions.</value>
+  </data>
+</root>
