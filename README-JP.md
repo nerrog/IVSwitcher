@@ -34,4 +34,4 @@ GTAVのMOD環境(ASIローダー)とオンライン環境(バニラ)を必要に
 * GTAV_PATH GTAVのディレクトリを指定(string)
 * dlls 無効化したいファイルの一覧(list string)
 * exec_url 実際に実行されるURL(string)
-* ~~use_epic EPIC Launcher使用時の設定(bool)~~ __(開発中)__
+* use_epic EPIC Launcher使用時の設定(bool)
