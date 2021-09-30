@@ -37,4 +37,4 @@ You can change the settings later by editing the generated `settings.json`.
 * GTAV_PATH Specify the GTAV directory (string)
 * dlls List of files to be disabled (list string)
 * exec_url URL to be actually executed (string)
-* ~~use_epic Configuration when using EPIC Launcher (bool)~~ __(under development)__
+* use_epic Configuration when using EPIC Launcher (bool)
