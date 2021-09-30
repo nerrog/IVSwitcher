@@ -147,12 +147,11 @@
                     Content="{x:Static properties:Resources.startup_cfg_desktop_icon_gta}"
                     x:Name="SC_GTAV"/>
                 
-                <!--Dev-->
                 <CheckBox 
                     Grid.Row="2"
                     Content="{x:Static properties:Resources.startup_cfg_use_epic}"
                     x:Name="USE_EPIC"
-                    Visibility="Collapsed"/>
+                    />
                 </Grid>
 
             <Button 

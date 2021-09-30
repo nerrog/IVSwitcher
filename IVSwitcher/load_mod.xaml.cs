@@ -52,7 +52,13 @@ namespace IVSwitcher
 
             if (_SW_JSON.use_epic)
             {
-                Process.Start(new ProcessStartInfo("taskkill", "/im EpicGamesLauncher.exe"));
+                Process[] ps =
+                Process.GetProcessesByName("EpicGamesLauncher");
+
+                foreach (Process p in ps)
+                {
+                    p.Kill();
+                }
             }
 
             Process.Start(_SW_JSON.exec_url);
