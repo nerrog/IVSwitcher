@@ -1,6 +1,8 @@
 # IVSwitcher
 
-[[English](README.md)|[日本語](README-JP.md)]
+![IVSwitcher](Icon\icon_500px.png)
+
+|[English](README.md)|[日本語](README-JP.md)|
 
 GTAVのMOD環境(ASIローダー)とオンライン環境(バニラ)を必要に応じて変更するソフト
 
