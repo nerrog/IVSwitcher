@@ -83,6 +83,15 @@ namespace IVSwitcher.Properties {
         }
         
         /// <summary>
+        ///   The following files are not found. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string main_json_not_found {
+            get {
+                return ResourceManager.GetString("main_json_not_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Loading mod version に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string main_mod_loading {

@@ -127,6 +127,9 @@ You can close the software if you want.</value>
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="main_json_not_found" xml:space="preserve">
+    <value>The following files are not found.</value>
+  </data>
   <data name="main_mod_loading" xml:space="preserve">
     <value>Loading mod version</value>
   </data>

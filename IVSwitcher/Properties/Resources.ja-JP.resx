@@ -123,6 +123,9 @@
 SteamのURLを入力した場合は元のショートカットを消さないようにしてください。
 ソフトは閉じても構いません</value>
   </data>
+  <data name="main_json_not_found" xml:space="preserve">
+    <value>以下のファイルが見つかりません。</value>
+  </data>
   <data name="main_mod_loading" xml:space="preserve">
     <value>MODバージョンをロード中</value>
   </data>

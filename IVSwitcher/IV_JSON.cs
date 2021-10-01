@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Unicode;
+using System.Windows;
 
 namespace IVSwitcher
 {
@@ -21,6 +19,11 @@ namespace IVSwitcher
 
         public static string Read_JSON_AllLine(string filePath, string encodingName)
         {
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show(Properties.Resources.main_json_not_found+"\n"+filePath,"Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                return "json_error";
+            }
             StreamReader sr = new StreamReader(filePath, Encoding.GetEncoding(encodingName));
             string allLine = sr.ReadToEnd();
             sr.Close();
