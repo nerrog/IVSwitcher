@@ -27,7 +27,6 @@ namespace IVSwitcher
 
             GameLoader.GTAV_Loader("online");
 
-            Application.Current.Shutdown();
         }
     }
 }

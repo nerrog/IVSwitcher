@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -24,9 +25,18 @@ namespace IVSwitcher
                 MessageBox.Show(Properties.Resources.main_json_not_found+"\n"+filePath,"Error",MessageBoxButton.OK,MessageBoxImage.Error);
                 return "json_error";
             }
-            StreamReader sr = new StreamReader(filePath, Encoding.GetEncoding(encodingName));
-            string allLine = sr.ReadToEnd();
-            sr.Close();
+
+            string allLine = "";
+            try
+            {
+                StreamReader sr = new StreamReader(filePath, Encoding.GetEncoding(encodingName));
+                allLine = sr.ReadToEnd();
+                sr.Close();
+            }catch (Exception e)
+            {
+                IVLogger.error("JSON read error!"+e.Message);
+            }
+
 
             return allLine;
         }

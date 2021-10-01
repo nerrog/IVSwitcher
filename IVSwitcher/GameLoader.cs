@@ -13,7 +13,7 @@ namespace IVSwitcher
         {
             string jsonStr = IV_JSON.Read_JSON_AllLine(AppDomain.CurrentDomain.BaseDirectory + "settings.json", "utf-8");
 
-            if(jsonStr == "json_error")
+            if(jsonStr == "json_error"|| jsonStr == "")
             {
                 IVLogger.error("settings.json load error!");
                 Application.Current.Shutdown();
