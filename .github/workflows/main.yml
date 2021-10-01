@@ -13,7 +13,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.2
         
       - name: restore nuget
-        uses: warrenbuckley/Setup-Nuget@v1
+        uses: nuget/setup-nuget@v1
         
       - run: nuget restore IVSwitcher/IVSwitcher.csproj
 
