@@ -15,7 +15,7 @@ jobs:
       - name: restore nuget
         uses: nuget/setup-nuget@v1
         
-      - run: nuget restore IVSwitcher/IVSwitcher.csproj
+      - run: nuget restore
 
       - name: Run MSBuild
         run: msbuild /p:Configuration=Release
