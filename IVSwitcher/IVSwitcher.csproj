@@ -122,6 +122,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GameLoader.cs" />
+    <Compile Include="IVLogger.cs" />
     <Compile Include="IV_JSON.cs" />
     <Compile Include="licence.xaml.cs">
       <DependentUpon>licence.xaml</DependentUpon>

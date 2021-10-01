@@ -30,6 +30,11 @@ Copy the following folders and files in the `Grand Theft Auto V` folder, create 
 * For the URL to be entered in the settings, create a shortcut from Steam or Epic Games Launcher, then copy and paste the URL of the shortcut.
 * The ASILoader `dinput8.dll` is disabled in the vanilla environment without adding it by default, but other files you want to disable should be added in the settings.
 
+# Boot options.
+
+* `-mod` Start with mod version (dll enabled).
+* `-online` Start with vanilla version (dll disabled)
+
 # For advanced users
 
 You can change the settings later by editing the generated `settings.json`.

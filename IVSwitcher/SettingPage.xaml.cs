@@ -4,7 +4,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Text.Json;
-using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text.Encodings.Web;
@@ -24,6 +23,7 @@ namespace IVSwitcher
         public SettingPage()
         {
             InitializeComponent();
+            IVLogger.info("Setting Page Loaded");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -141,6 +141,7 @@ namespace IVSwitcher
 
 
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory+"settings.json", jsonStr);
+                IVLogger.info("Write settings.json");
 
                 NavigationService.Navigate(new Startup_conf());
 

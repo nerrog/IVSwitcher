@@ -9,6 +9,7 @@ namespace IVSwitcher
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            IVLogger.logger_init();
             new MainWindow().Show();
         }
     }

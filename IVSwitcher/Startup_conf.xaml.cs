@@ -38,6 +38,7 @@ namespace IVSwitcher
         public Startup_conf()
         {
             InitializeComponent();
+            IVLogger.info("Startup_conf loaded");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,7 +55,6 @@ namespace IVSwitcher
             g.Dispose();
             def_icon.Source = ImageSourceFromBitmap(canvas);
 
-
         }
 
         private void Open_Browser_Click(object sender, RoutedEventArgs e)
@@ -68,6 +68,7 @@ namespace IVSwitcher
             if (url_textbox.Text == "")
             {
                 MessageBox.Show(Properties.Resources.startup_cfg_url_error);
+                IVLogger.warn("Url box is empty return");
                 return;
             }
 
@@ -98,6 +99,8 @@ namespace IVSwitcher
 
             File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "settings.json", jsonStr_NEW);
 
+            IVLogger.info("Write settings.json");
+
             if ((bool)Add_Desktop_SC.IsChecked)
             {
                 Create_Desktop_SC(Properties.Resources.startup_cfg_SC_name_mod, "-mod", Properties.Resources.startup_cfg_SC_comment);
@@ -109,6 +112,7 @@ namespace IVSwitcher
 
         private void Create_Desktop_SC(string SC_Name, string parameter, string comment)
         {
+            IVLogger.info("Creating Desktop Shortcut "+parameter);
             Assembly myAssembly = Assembly.GetEntryAssembly();
 
             string shortcutPath = Path.Combine(
@@ -143,7 +147,13 @@ namespace IVSwitcher
             }
 
             //ショートカットを作成
-            shortcut.Save();
+            try { 
+                shortcut.Save();
+            }
+            catch(Exception e)
+            {
+                IVLogger.error("Create Desktop Shortcut failed" + e.Message);
+            }
 
             Marshal.FinalReleaseComObject(shortcut);
             Marshal.FinalReleaseComObject(shell);
