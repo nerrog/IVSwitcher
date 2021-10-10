@@ -198,8 +198,20 @@ SOFTWARE.</value>
   <data name="startup_cfg_add_sc" xml:space="preserve">
     <value>Add a shortcut to the desktop</value>
   </data>
+  <data name="startup_cfg_call_exe" xml:space="preserve">
+    <value>Start by specifying the exe file</value>
+  </data>
+  <data name="startup_cfg_call_url" xml:space="preserve">
+    <value>Start by specifying the URL</value>
+  </data>
   <data name="startup_cfg_desktop_icon_gta" xml:space="preserve">
     <value>Make the icon a GTAV one.</value>
+  </data>
+  <data name="startup_cfg_icon" xml:space="preserve">
+    <value>Icon by https://icons8.com</value>
+  </data>
+  <data name="startup_cfg_icon_menu" xml:space="preserve">
+    <value>Icons provided</value>
   </data>
   <data name="startup_cfg_SC_comment" xml:space="preserve">
     <value>by IV Switcher</value>

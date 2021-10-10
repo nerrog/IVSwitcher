@@ -8,11 +8,21 @@
         mc:Ignorable="d"
         Title="{x:Static properties:Resources.settings_oss}" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <TextBox
+            Grid.Row="0"
             Text="{x:Static properties:Resources.settings_OSS_LICENCE}"
             VerticalScrollBarVisibility="Visible"
             IsReadOnly="True"
             />
-
+        <TextBlock Grid.Row="1">
+            <Hyperlink NavigateUri="https://icons8.com" RequestNavigate="Hyperlink_RequestNavigate">
+                <TextBlock Text="{x:Static properties:Resources.startup_cfg_icon}"/>
+            </Hyperlink>
+        </TextBlock>
+        
     </Grid>
 </Window>

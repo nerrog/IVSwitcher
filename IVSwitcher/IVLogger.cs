@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -66,6 +67,13 @@ namespace IVSwitcher
             {
                 File.Delete(logpath);
             }
+            var dt = File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location);
+            dt += new TimeSpan(9, 0, 0);
+
+            OutLog("INFO", "IV Switcher Info:\n"+System.Diagnostics.FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location), "IVLogger.cs", -1);
+            OutLog("INFO", "Build Date:"+dt, "IVLogger.cs", -1);
+            OutLog("INFO", "Runtime build:" + Environment.Version.ToString(), "IVLogger.cs", -1);
+
         }
     }
 }

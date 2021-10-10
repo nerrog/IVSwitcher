@@ -169,8 +169,20 @@ SteamのURLを入力した場合は元のショートカットを消さないよ
   <data name="startup_cfg_add_sc" xml:space="preserve">
     <value>デスクトップにショートカットを追加する</value>
   </data>
+  <data name="startup_cfg_call_exe" xml:space="preserve">
+    <value>exeファイルを指定して起動</value>
+  </data>
+  <data name="startup_cfg_call_url" xml:space="preserve">
+    <value>URLを指定して起動</value>
+  </data>
   <data name="startup_cfg_desktop_icon_gta" xml:space="preserve">
     <value>アイコンをGTAVのものにする</value>
+  </data>
+  <data name="startup_cfg_icon" xml:space="preserve">
+    <value>Icon by https://icons8.com</value>
+  </data>
+  <data name="startup_cfg_icon_menu" xml:space="preserve">
+    <value>アイコン提供</value>
   </data>
   <data name="startup_cfg_SC_comment" xml:space="preserve">
     <value>by IV Switcher</value>

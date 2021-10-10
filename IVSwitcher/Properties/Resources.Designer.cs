@@ -257,11 +257,47 @@ namespace IVSwitcher.Properties {
         }
         
         /// <summary>
+        ///   Start by specifying the exe file に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string startup_cfg_call_exe {
+            get {
+                return ResourceManager.GetString("startup_cfg_call_exe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Start by specifying the URL に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string startup_cfg_call_url {
+            get {
+                return ResourceManager.GetString("startup_cfg_call_url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Make the icon a GTAV one. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string startup_cfg_desktop_icon_gta {
             get {
                 return ResourceManager.GetString("startup_cfg_desktop_icon_gta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Icon by https://icons8.com に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string startup_cfg_icon {
+            get {
+                return ResourceManager.GetString("startup_cfg_icon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Icons provided に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string startup_cfg_icon_menu {
+            get {
+                return ResourceManager.GetString("startup_cfg_icon_menu", resourceCulture);
             }
         }
         

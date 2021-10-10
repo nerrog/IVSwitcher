@@ -26,13 +26,15 @@
               Mode="Inverted"
               Padding="16">
             <DockPanel>
-                <materialDesign:PopupBox
-                          DockPanel.Dock="Right"
-                          PlacementMode="BottomAndAlignRightEdges">
-                    <Button 
-                        Content="{x:Static properties:Resources.settings_oss}" Click="Button_Click"/>
+                    <materialDesign:PopupBox
+                        DockPanel.Dock="Right"
+                        PlacementMode="BottomAndAlignRightEdges">
+                        <StackPanel>
+                            <Button 
+                                Content="{x:Static properties:Resources.settings_oss}" Click="Button_Click"/>
+                        </StackPanel>
 
-                </materialDesign:PopupBox>
+                    </materialDesign:PopupBox>
                 <StackPanel
                     Orientation="Horizontal">
                     <Image
@@ -63,63 +65,44 @@
                     <ColumnDefinition Width="390"/>
                     <ColumnDefinition Width="390"/>
                 </Grid.ColumnDefinitions>
-                <Image 
+                    <Image 
                     Grid.Row="0"
                     Grid.Column="0"
                     Width="100"
                     Height="100"
                     x:Name="def_icon"/>
-                <TextBlock 
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    VerticalAlignment="Center"
-                    Text="{x:Static properties:Resources.startup_cfg_select_type_kam}"
-                    />
-                <TextBlock 
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    VerticalAlignment="Center"
-                    Text="{x:Static properties:Resources.start_up_cfg_kam}"
-                    />
-                <Image 
+                    <RadioButton
+                        x:Name="exe_chk_box"
+                        Grid.Row="1"
+                        Content="{x:Static properties:Resources.startup_cfg_call_exe}"
+                        Grid.Column="0"
+                        HorizontalAlignment="Center"
+                        Margin="10 10 10 10" Click="exe_chk_box_Click"
+                        />
+                    <Image 
                     Grid.Row="0"
                     Grid.Column="1"
                     Width="100"
                     Height="100"
-                    Source="Resources/steam_icon.png"/>
-                <TextBlock 
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    TextDecorations="Strikethrough"
-                    Text="{x:Static properties:Resources.startup_cfg_select_type_pad}"
-                    />
-                <TextBlock 
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    TextWrapping="Wrap"
-                    Text="{x:Static properties:Resources.startup_cfg_sorry}"
-                    />
-                <!-- x:Static properties:Resources.start_up_cfg_pad -->
-            </Grid>
+                    Source="Resources/url.png"/>
+                    <RadioButton
+                        x:Name="url_chk_box"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Content="{x:Static properties:Resources.startup_cfg_call_url}"
+                        HorizontalAlignment="Center"
+                        IsChecked="True"
+                        Margin="10 10 10 10" Click="url_chk_box_Click"
+                        />
+                </Grid>
 
         </GroupBox>
 
-        <Button
-          Grid.Row="2"
-          Grid.Column="0"
-          Style="{StaticResource MaterialDesignRaisedLightButton}"
-          ToolTip="Resource name: MaterialDesignRaisedLightButton"
-          Content="{x:Static properties:Resources.startup_cfg_video_open}" Margin="0,5,15,5" HorizontalAlignment="Right" Width="300"
-          x:Name="Open_Browser" Click="Open_Browser_Click"
-            Visibility="Collapsed"
-            />
-
         <Grid Grid.Row="3" Grid.Column="0" Margin="0 0 0 10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="390"/>
-                <ColumnDefinition Width="390"/>
+                    <ColumnDefinition Width="390"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -132,7 +115,14 @@
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 VerticalAlignment="Center"
                 x:Name="url_textbox"/>
-            <Grid Grid.Row="1" Grid.Column="0">
+                <Button
+                    x:Name="Open_btn"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Content="{x:Static properties:Resources.settings_location_open}"
+                    Visibility="Collapsed" Click="Open_btn_Click"
+                    />
+                <Grid Grid.Row="1" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -156,7 +146,7 @@
 
             <Button 
                 Grid.Row="1"
-                Grid.Column="1"
+                Grid.Column="2"
                 Margin="10,0,0,0"
                 Content="OK"
                 x:Name="OK_Btn" Click="OK_Btn_Click"

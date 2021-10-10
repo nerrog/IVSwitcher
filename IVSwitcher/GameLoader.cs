@@ -9,6 +9,7 @@ namespace IVSwitcher
 {
     class GameLoader
     {
+
         public static async void GTAV_Loader(string startup_type)
         {
             string jsonStr = IV_JSON.Read_JSON_AllLine(AppDomain.CurrentDomain.BaseDirectory + "settings.json", "utf-8");
@@ -82,9 +83,27 @@ namespace IVSwitcher
 
             await Task.Delay(500);
 
-            Process.Start(_SW_JSON.exec_url);
+            Process process = new Process();
+            process.StartInfo.WorkingDirectory = _SW_JSON.GTAV_PATH;
+
+            process = Process.Start(_SW_JSON.exec_url);
 
             IVLogger.info("Starting "+_SW_JSON.exec_url);
+
+            process.WaitForExit();
+
+            string mes = "Process :" + process.Id + " Exit " + process.ExitCode.ToString();
+
+            if (process.ExitCode != 0)
+            {
+                IVLogger.warn(mes);
+            }
+            else
+            {
+                IVLogger.info(mes);
+            }
+
+            
 
             await Task.Delay(1000);
 
@@ -92,6 +111,7 @@ namespace IVSwitcher
 
             Application.Current.Shutdown();
         }
+
 
     }
 }

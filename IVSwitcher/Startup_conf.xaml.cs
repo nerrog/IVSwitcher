@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Text.Unicode;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -57,17 +58,13 @@ namespace IVSwitcher
 
         }
 
-        private void Open_Browser_Click(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://cdn.nerrog.net/IV/IV_SW.mp4");
-        }
 
         private void OK_Btn_Click(object sender, RoutedEventArgs e)
         {
 
             if (url_textbox.Text == "")
             {
-                MessageBox.Show(Properties.Resources.startup_cfg_url_error);
+                System.Windows.MessageBox.Show(Properties.Resources.startup_cfg_url_error);
                 IVLogger.warn("Url box is empty return");
                 return;
             }
@@ -157,6 +154,25 @@ namespace IVSwitcher
 
             Marshal.FinalReleaseComObject(shortcut);
             Marshal.FinalReleaseComObject(shell);
+        }
+
+        private void exe_chk_box_Click(object sender, RoutedEventArgs e)
+        {
+            Open_btn.Visibility = Visibility.Visible;
+        }
+
+        private void url_chk_box_Click(object sender, RoutedEventArgs e)
+        {
+            Open_btn.Visibility = Visibility.Collapsed;
+        }
+
+        private void Open_btn_Click(object sender, RoutedEventArgs e)
+        {
+            //ファイルを開くダイアログボックスの作成 
+            var ofd = new OpenFileDialog();
+            ofd.Filter = "exe file|*.exe";
+            if (ofd.ShowDialog() == DialogResult.Cancel) return;
+            url_textbox.Text = ofd.FileName;
         }
     }
 }
