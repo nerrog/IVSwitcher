@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using System.Windows.Forms;
 
 namespace IVSwitcher
 {
@@ -69,18 +70,16 @@ namespace IVSwitcher
 
         private void dll_select_btn_Click(object sender, RoutedEventArgs e)
         {
-            using (var cofd = new CommonOpenFileDialog()
-            {
-                Title = $"{Properties.Resources.settings_dll_listbox}"
-            })
+            OpenFileDialog OFD = new OpenFileDialog();
 
+            OFD.Multiselect = true;
+
+            if (OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                if (cofd.ShowDialog() != CommonFileDialogResult.Ok)
+                foreach (string strFilePath in OFD.FileNames)
                 {
-                    return;
+                    dll_listbox.Items.Add(strFilePath);
                 }
-
-                dll_listbox.Items.Add(cofd.FileName);
             }
         }
 
