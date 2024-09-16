@@ -16,18 +16,18 @@ namespace IVSwitcher
 
             string[] args = Environment.GetCommandLineArgs();
 
-            Uri uri = new Uri("SettingPage.xaml", UriKind.Relative);
+            Uri uri = new Uri("UI/SettingPage.xaml", UriKind.Relative);
             if (args.Length != 1)
             {
                 if(args[1] == "-mod")
                 {
-                    uri = new Uri("load_mod.xaml", UriKind.Relative);
+                    uri = new Uri("UI/load_mod.xaml", UriKind.Relative);
                     IVLogger.info("Loading MOD screen");
 
                 }
                 else if (args[1] == "-online")
                 {
-                    uri = new Uri("load_online.xaml", UriKind.Relative);
+                    uri = new Uri("UI/load_online.xaml", UriKind.Relative);
                     IVLogger.info("Loading ONLINE screen");
                 }
             }
