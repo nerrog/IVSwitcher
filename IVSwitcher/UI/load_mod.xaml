@@ -11,7 +11,7 @@
       Title="load_mod" Loaded="Page_Loaded">
 
     <Grid>
-        <Image Source="Resources/icon.ico" Width="150" Height="150" Margin="50,50,600,250"/>
+        <Image Source="pack://application:,,,/Resources/icon.ico" Width="150" Height="150" Margin="50,50,600,250"/>
         <Grid Margin="220 120 0 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
