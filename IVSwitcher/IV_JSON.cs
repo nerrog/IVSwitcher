@@ -17,7 +17,7 @@ namespace IVSwitcher
             public string exec_url { get; set; }
             public bool use_epic { get; set; }
 
-            public string disableFileExtension { get; set; } = "disabled";
+            public string disableFileExtension { get; set; } = ".disabled";
 
             public bool useLoadGameDirect { get; set; }
         }

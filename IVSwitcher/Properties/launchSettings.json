@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "IVSwitcher": {
+      "commandName": "Project"
+    },
+    "LoadMod": {
+      "commandName": "Project",
+      "commandLineArgs": "-mod"
+    },
+    "LoadOnline": {
+      "commandName": "Project",
+      "commandLineArgs": "-online"
+    }
+  }
+}

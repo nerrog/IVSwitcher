@@ -23,6 +23,9 @@ namespace IVSwitcher
             IV_JSON.IV_SW_JSON _SW_JSON = new IV_JSON.IV_SW_JSON();
             _SW_JSON = JsonSerializer.Deserialize<IV_JSON.IV_SW_JSON>(jsonStr);
 
+            string disabledDllExtension = _SW_JSON.disableFileExtension;
+            string gameStartOptions = "";
+
             if (startup_type == "mod")
             {
                 //load mod version
@@ -31,17 +34,22 @@ namespace IVSwitcher
 
                 foreach (string str in _SW_JSON.dlls)
                 {
-                    if (File.Exists(str + ".iv_sw"))
+                    if (File.Exists(str + disabledDllExtension))
                     {
-                        File.Move(str + ".iv_sw", str);
+                        File.Move(str + disabledDllExtension, str);
                         IVLogger.info("Renamed "+str);
                     }
                 }
 
-                if (File.Exists(_SW_JSON.GTAV_PATH + @"\dinput8.dll.iv_sw"))
+                if (File.Exists(_SW_JSON.GTAV_PATH + @$"\dinput8.dll{disabledDllExtension}"))
                 {
-                    File.Move(_SW_JSON.GTAV_PATH + @"\dinput8.dll.iv_sw", _SW_JSON.GTAV_PATH + @"\dinput8.dll");
+                    File.Move(_SW_JSON.GTAV_PATH + @$"\dinput8.dll{disabledDllExtension}", _SW_JSON.GTAV_PATH + @"\dinput8.dll");
                     IVLogger.info("Renamed dinput8.dll");
+                }
+
+                if (_SW_JSON.useLoadGameDirect)
+                {
+                    gameStartOptions = "-scofflineonly";
                 }
             }
             else
@@ -53,15 +61,20 @@ namespace IVSwitcher
                 {
                     if (File.Exists(str))
                     {
-                        File.Move(str, str + ".iv_sw");
-                        IVLogger.info("Renamed " + str + ".iv_sw");
+                        File.Move(str, str + disabledDllExtension);
+                        IVLogger.info("Renamed " + str + disabledDllExtension);
                     }
                 }
 
                 if (File.Exists(_SW_JSON.GTAV_PATH + @"\dinput8.dll"))
                 {
-                    File.Move(_SW_JSON.GTAV_PATH + @"\dinput8.dll", _SW_JSON.GTAV_PATH + @"\dinput8.dll.iv_sw");
-                    IVLogger.info("Renamed dinput8.dll.iv_sw");
+                    File.Move(_SW_JSON.GTAV_PATH + @"\dinput8.dll", _SW_JSON.GTAV_PATH + $@"\dinput8.dll{disabledDllExtension}");
+                    IVLogger.info($"Renamed dinput8.dll{disabledDllExtension}");
+                }
+
+                if (_SW_JSON.useLoadGameDirect)
+                {
+                    gameStartOptions = "-StraightIntoFreemode";
                 }
             }
 
@@ -84,11 +97,27 @@ namespace IVSwitcher
             await Task.Delay(500);
 
             Process process = new Process();
-            process.StartInfo.WorkingDirectory = _SW_JSON.GTAV_PATH;
+            ProcessStartInfo info = new ProcessStartInfo();
+            info.WorkingDirectory = _SW_JSON.GTAV_PATH;
 
-            process = Process.Start(_SW_JSON.exec_url);
+            string startUrl = _SW_JSON.exec_url;
+            if (gameStartOptions != "")
+            {
+                if (_SW_JSON.exec_url.StartsWith("steam://"))
+                {
+                    startUrl = $"{_SW_JSON.exec_url}//{gameStartOptions}";
+                }
+                else
+                {
+                    info.Arguments = gameStartOptions ;
+                }
+            }
 
-            IVLogger.info("Starting "+_SW_JSON.exec_url);
+            info.FileName = startUrl;
+            info.UseShellExecute = true;
+            process = Process.Start(info);
+
+            IVLogger.info("Starting "+startUrl);
 
             process.WaitForExit();
 
