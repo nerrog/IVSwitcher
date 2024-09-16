@@ -16,6 +16,10 @@ namespace IVSwitcher
             public List<string> dlls { get; set; }
             public string exec_url { get; set; }
             public bool use_epic { get; set; }
+
+            public string disableFileExtension { get; set; } = "disabled";
+
+            public bool useLoadGameDirect { get; set; }
         }
 
         public static string Read_JSON_AllLine(string filePath, string encodingName)
