@@ -21,7 +21,7 @@ jobs:
         run: msbuild /p:Configuration=Release
         
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: IVSwitcher_GitHub_actions_artifacts
           path: IVSwitcher\bin\Release
