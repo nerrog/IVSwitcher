@@ -25,14 +25,22 @@
     <UseWindowsForms>True</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+	<Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebugType>none</DebugType>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Startup_Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Startup_Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Startup_Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Startup_Debug\</OutputPath>
   </PropertyGroup>

@@ -110,7 +110,8 @@ namespace IVSwitcher
         private void Create_Desktop_SC(string SC_Name, string parameter, string comment)
         {
             IVLogger.info("Creating Desktop Shortcut "+parameter);
-            Assembly myAssembly = Assembly.GetEntryAssembly();
+
+            string exepath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
 
             string shortcutPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory),
@@ -121,7 +122,7 @@ namespace IVSwitcher
             IWshRuntimeLibrary.IWshShortcut shortcut =
                 (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcutPath);
             
-            shortcut.TargetPath = myAssembly.Location;
+            shortcut.TargetPath = exepath;
 
             //パラメーター
             shortcut.Arguments = parameter;
@@ -140,7 +141,7 @@ namespace IVSwitcher
             }
             else
             {
-                shortcut.IconLocation = myAssembly.Location + ",0";
+                shortcut.IconLocation = exepath + ",0";
             }
 
             //ショートカットを作成
