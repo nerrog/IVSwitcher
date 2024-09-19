@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IVSwitcher"
         mc:Ignorable="d"
         Title="IV Switcher" Height="450" Width="800"
-        Icon="Resources/icon.ico"
+        Icon="pack://application:,,,/Resources/icon.ico"
         ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight">
     
     <Grid>

@@ -38,7 +38,7 @@
                 <StackPanel
                     Orientation="Horizontal">
                     <Image
-                        Source="Resources/icon.ico" Height="50" Width="50"/>
+                        Source="pack://application:,,,/Resources/icon.ico" Height="50" Width="50"/>
                     <TextBlock
                     VerticalAlignment="Center"
                     Margin="16 0 0 0"
@@ -84,7 +84,7 @@
                     Grid.Column="1"
                     Width="100"
                     Height="100"
-                    Source="Resources/url.png"/>
+                    Source="pack://application:,,,/Resources/url.png"/>
                     <RadioButton
                         x:Name="url_chk_box"
                         Grid.Row="1"
